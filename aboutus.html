@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About Us</title>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="x-icon" href="images/tabimg.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/aboutuscss.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>PPSLA</title>
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar">
+        <div class="logo"><a href="">
+          <img src="images/tabimg.png" alt=""></a></div>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="aboutus" href="aboutus.html">About Us</a></li>
+      <!--  <li><a href="awardees.html">Awardees</a></li>  -->
+        <!-- <li><a href="bene">Our Beneficiaries</a></li> -->
+      </ul>
+    </div>
+
+
+    </div>
+    <div class="dropdown_menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="awardees.html">Awardees</a></li>
+      <!-- <li><a href="bene">Our Beneficiaries</a></li> -->
+    </div>
+    <div class="about">
+      <div class="inner-section">
+        <h1 class="clint">About Us</h1>
+        <p class="text">
+          <span>Philippine Public Service Leadership Awards</span> is honor individuals who make outstanding contributions and who’s
+          accomplished are models of exemplary public service for those dedicated to the public good-now and in the
+          future. This recognition highlights milestone of success and triumph in public service worthy of praise and
+          admiration Public Service Leadership Awards recognizes your accomplishments in public service that
+          contribute and boosted your talent and skill towards nation-building.<br><br>
+          Philippine Public Service Leadership Awards uncovered hundreds of inspirational stories of Filipino Public
+          Servants who sought to make a difference in the lives of their constituents, their community, and the country
+          as well.<br><br>
+          Through public recognition, this event aims to motivate the Filipinos to further excel in their chosen fields,
+          boost their self-esteem, and emulate their success in the coming generation. This is also a time to share your
+          success story and triumph over countless afflictions and adversities you have been through in your journey to
+          give service to the public and to further motivate others to achieve more in their crafts.
+
+        </p>
+        <div class="skills">
+          <a href="contactus.html"><button>Contact Us</button> </a>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <footer>
+      <p>&copy; 2023 Philippine Public Service Awards and Outstanding Executive Awards. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+      } 
+    </script>
+</body>
+
+</body>
