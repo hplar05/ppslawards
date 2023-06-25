@@ -1,38 +1,130 @@
+
 span{
-  color: rgb(236, 190, 37);
+  color: gold;
   font-style: italic;
 }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    background-color: white;
+    padding-bottom: 30px;
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(41, 39, 39);
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
 .aboutus {
-    color: yellow;
+  color: gold;
 }
 
 .about{
-    background-size: 47%;
-    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 33px;
+	background: transparent;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 0px 0;
+    background-color: rgb(41, 39, 39);
+    background-size: 2px;
+    display: flex;
+    justify-content: space-between;
 }
 .inner-section {
-    border-radius: 25px;
     width: 100%;
     float: right;
-    background-color: rgba(36, 34, 34, 0.7); /* Change the alpha value to adjust opacity */
     padding: 140px;
-    box-shadow: 13px 12px 8px rgba(0, 0, 0, 0.3);
 }
 
 .inner-section h1{
     margin-bottom: 30px;
     font-size: 30px;
-    color: rgb(228, 175, 63);
+    color: white;
+    font-style: italic;
 }
-.text{
+.text {
     font-size: 20px;
     color: white;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
-}
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (max-width: 480px) {
+    .text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  
+
 .skills button{
     font-size: 22px;
     text-align: center;

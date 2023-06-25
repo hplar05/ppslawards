@@ -1,357 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" type="x-icon" href="images/tabimg.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-    <style>
-.home{
-        color: gold;
-        
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="x-icon" href="images/tab1.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .home {
+      color: gold;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 47.25%;
+      /* 16:9 aspect ratio (change this value according to the aspect ratio of your video) */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+
+    }
+
+    .heading {
+      color: #fff;
+      font-size: 27px;
+      font-weight: lighter;
+      text-align: center;
+      letter-spacing: 2px;
+      word-spacing: 6px;
+      margin-bottom: 3px;
+    }
+
+    .wrapper {
+      background-color: transparent;
+
+    }
+
+    .sea {
+
+      color: rgb(255, 255, 255);
+      font-family: 'Arial', sans-serif;
+      text-shadow: #ffffff;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-size: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .sea {
+        font-size: 25px;
       }
-.heading{
-    color: #fff;
-    font-size: 27px;
-    font-weight: lighter;
-    text-align: center;
-    letter-spacing: 6px;
-    word-spacing: 6px;
-    margin-bottom: 3px;
-}
-.description{
-    color: #bababa;
-    text-align: center;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-family: Lucida Sans;
-}
-.timer{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: px;
-    justify-content: center;
-}
-.sub_timer{
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-    overflow: hidden;
-}
-.digit{
-    color: #fff;
-    font-weight: lighter;
-    font-size: 70px;
-    text-align: center;
-    padding: 2.5rem 0;
-}
-.digit_name{
-    color: #000;
-    background: #fff;
-    text-align: center;
-    padding: 0.6rem 0;
-    font-size: 20px;
-}
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+    }
 
-.logos {
-  overflow: hidden;
-  padding: 10px 0;
-  background: white;
-  white-space: nowrap;
-  position: relative;
-}
+    /* Media query for even smaller screens */
+    @media (max-width: 480px) {
+      .sea {
+        font-size: 20px;
+      }
+    }
 
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
+    .description {
+      color: #bababa;
+      text-align: center;
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-family: Lucida Sans;
+    }
 
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
+    .timer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      justify-content: center;
+    }
 
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
+    .sub_timer {
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      overflow: hidden;
+    }
 
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
+    .digit {
+      color: #fff;
+      font-weight: lighter;
+      font-size: 85px;
+      text-align: center;
+      padding: 2.5rem 0;
+    }
+    @media (max-width: 768px) {
+      .digit {
+        font-size: 50px;
+      }
+    }
 
-.logos-slide {
-  display: inline-block;
-  animation: 35s slide infinite linear;
-}
+    .digit_name {
+      color: #000;
+      background: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-size: 20px;
+    }
 
-.logos-slide img {
-  height: 50px;
-  margin: 0 40px;
-}
+    @keyframes slide {
+      from {
+        transform: translateX(0);
+      }
 
-    </style>
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .logos {
+      overflow: hidden;
+      padding: 10px 0;
+      background: white;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .logos:before,
+    .logos:after {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+
+    .logos:before {
+      left: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    }
+
+    .logos:after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    }
+
+    .logos:hover .logos-slide {
+      animation-play-state: paused;
+    }
+
+    .logos-slide {
+      display: inline-block;
+      animation: 35s slide infinite linear;
+    }
+
+    .logos-slide img {
+      height: 50px;
+      margin: 0 40px;
+    }
 
 
-  <title>PPSLA</title>
-  </head>
-  <body>
-    <header>      
-    </div>
-    <ul class="dropdown_menu">
-      <li><a class="home" href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Awardees</a></li>
-      <li><a href="#">Our Beneficiaries</a></li>
-    </ul>
-    </div>
-      <div class="navbar">
-        <div class="logo"><a href="">
-          <img src="images/tabimg.png" alt=""></a></div>
+    @media (max-width: 768px) {
+      .logos-slide img {
+        margin: 0 15px;
+      }
+    }
+  </style>
 
-          <div>
-            <div>
-              <ul class="links">
-                <li><a class="home" href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <!--<li><a href="awardees.html">Awardees</a></li>
-                <li><a href="bene">Our Beneficiaries</a></li>  -->
-              </ul>
-            </div>
-    </header>
-      <br><br><br><br>
-    <div class="wrapper">
-      <h1 class="heading">Philippine Public Service Awards 2023 are still open for Nominations!<br>Fill out the Google Forms for submission.</h1>
-      <div class="timer">
-          <div class="sub_timer">
-              <h1 id="day" class="digit">00</h1>
-              <p class="digit_name">Days</p>
-          </div>
-          <div class="sub_timer">
-              <h1 id="hour" class="digit">00</h1>
-              <p class="digit_name">Hours</p>
-          </div>
-          <div class="sub_timer">
-              <h1 id="min" class="digit">00</h1>
-              <p class="digit_name">Minutes</p>
-          </div>
-          <div class="sub_timer">
-              <h1 id="sec" class="digit">00</h1>
-              <p class="digit_name">Seconds</p>
-          </div>
+
+  <title>SEA BEA</title>
+</head>
+
+<body>
+  <header>
+
+    <div class="navbar">
+      <div class="logo"><a href="">
+          <img src="images/tab.png" alt=""></a></div>
+      <ul class="links">
+        <li><a class="home" href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="awardees.html">Awardees</a></li>
+        <li><a href="pdf/SEA-BEA-CRITERIA.pdf" download>Criteria</a></li>
+        <li><a class="faqw" href="faq.html">FAQ's</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
-  </div>
-<br> 
-<div class="button-div">
-<a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdSfM1xhN655LhT6H5oRfa_6cr-jeISNXxesy6kPa_CPV4cKg%2Fviewform%3Ffbclid%3DIwAR0ohbZODdEb52DPDtAErVqpmyhzZwyJLmFZT5VE5BbkTlf_3vZqw0fdslo&h=AT1t596bQuPMCWqs2Brz3FD_uIZE_mqAhXxYIBadfQAxs5362iYPbxl4hY0Uh79vZztKSydZhzww0pT8T-HyMTzkKtVrZXS9F4I32kc6OJnoRgRvUM_H05v_a3XwRAjAHLSh&__tn__=-UK-R&c[0]=AT1kCascP3uNbwdZ7EbBLN9tvBSnh5UuKKsenCmUMo6TGac2h_6QrSUYsaVUhKeukRzzx3FgOIjQwQExuBDt9-5GiCUQIXSiWDdm_9Y_MFrVCHKbxUxiB7w3f4SBpLCPymEBOXmhKIAGNe-HckTiHd_yL9-AMV2H_gTOCIhEm_A"><button class="nomination">
-  Nomination
-</button></a>
-<a href="contactus.html"><button class="contactus">
-  Contact Us
-</button></a>
-</div>
+    </div>
 
-<br><br>
-<div class="logos">
-  <div class="logos-slide">
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
+    <div class="dropdown_menu">
+      <li><a class="home" href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="awardees.html">Awardees</a></li>
+      <li><a href="pdf/SEA-BEA-CRITERIA.pdf" download>Criteria</a></li>
+      <li><a class="faqw" href="faq.html">FAQ's</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSfM1xhN655LhT6H5oRfa_6cr-jeISNXxesy6kPa_CPV4cKg/viewform?fbclid=IwAR0ohbZODdEb52DPDtAErVqpmyhzZwyJLmFZT5VE5BbkTlf_3vZqw0fdslo" class="action_btn">Nomination</a></li>
 
-  </div>
+    </div>
+  </header>
 
-  <div class="logos-slide">
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
-    <img src="./logos/sea-logo.png" />
-    <img src="./logos/akbay-logo.png" />
-    <img src="./logos/jgoe-logo.png" />
-    <img src="./logos/jgo2-logo.png" />
-    <img src="./logos/Ate Gigi.png" />
-    <img src="./logos/city of bislig.png" />
-    <img src="./logos/PASIL LOGO.png" />
-    <img src="./logos/Pagbilao Unofficial Enhanced Seal.png" />
+  <script> 
+  const toggleBtn = document.querySelector('.toggle_btn')
+  const toggleBtnIcon = document.querySelector('.toggle_btn i')
+  const dropDownMenu = document.querySelector('.dropdown_menu')
 
-  </div>
-</div>
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
 
-  <!-- javascript  -->
-  <script>
-        var target_mili_sec = new Date("June 23, 2023 12:00:00").getTime();
-        function timer() {
-            var now_mili_sec = new Date().getTime();
-            var remaining_sec = Math.floor( (target_mili_sec - now_mili_sec) / 1000 );
-
-            var day = Math.floor(remaining_sec / (3600 * 24));
-            var hour = Math.floor((remaining_sec % (3600 * 24)) / 3600);
-            var min = Math.floor((remaining_sec % 3600) / 60);
-            var sec = Math.floor(remaining_sec % 60);
-
-            document.querySelector("#day").innerHTML = day;
-            document.querySelector("#hour").innerHTML = hour;
-            document.querySelector("#min").innerHTML = min;
-            document.querySelector("#sec").innerHTML = sec;
-        }
-
-        setInterval(timer, 1000); //1000 it means 1 sec
-        
+    toggleBtnIcon.classList = isOpen 
+    ? 'fa solid fa-xmark'
+    : 'fa solid fa-bars'    
+  }
   </script>
-      <main>
-    <!--    <section id="home">
-          <h1>WELCOME<br>SOUTHEAST ASIA BUSINESS EXCELLENCE AWARDS </h1>
-          <br><br>  -->  
-        <!--<p>LLorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore.
+
   
-          </p> -->  
-        </section> 
-      </main>
-      <br><br><br>
-      <div class="slider-frame">
-        <div class="slide-images">
-          <div class="img-container">
-            <img src="images/img1.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img2.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img3.jpg">
-          </div>
+  
+  <div class="video-container">
+    <video src="videos/seabealogovid.mp4" autoplay muted></video>
+  </div>
+
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+
+      </div>
+
+      <div class="logos-slide">
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/rm-logo.png" />
+        <img src="./logos/akbay-logo.png" />
+        <img src="./logos/cebu-logo.png" />
+        <img src="./logos/ph-logo.png" />
+
+
+      </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <div class="wrapper">
+      <h1 class="heading">
+        <span class="sea">
+          We are still open for Nominations!<br>Fill out the Google Forms for submission.
+        </span>
+      </h1>
+    </div>
+    <div class="timer">
+      <div class="sub_timer">
+        <h1 id="day" class="digit">00</h1>
+        <p class="digit_name">Days</p>
+      </div>
+      <div class="sub_timer">
+        <h1 id="hour" class="digit">00</h1>
+        <p class="digit_name">Hours</p>
+      </div>
+      <div class="sub_timer">
+        <h1 id="min" class="digit">00</h1>
+        <p class="digit_name">Minutes</p>
+      </div>
+      <div class="sub_timer">
+        <h1 id="sec" class="digit">00</h1>
+        <p class="digit_name">Seconds</p>
+      </div>
+    </div>
+    </div>
+    <br>
+
+    <div class="button-div">
+      <a
+        href="https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSdSfM1xhN655LhT6H5oRfa_6cr-jeISNXxesy6kPa_CPV4cKg%2Fviewform%3Ffbclid%3DIwAR0ohbZODdEb52DPDtAErVqpmyhzZwyJLmFZT5VE5BbkTlf_3vZqw0fdslo&h=AT1t596bQuPMCWqs2Brz3FD_uIZE_mqAhXxYIBadfQAxs5362iYPbxl4hY0Uh79vZztKSydZhzww0pT8T-HyMTzkKtVrZXS9F4I32kc6OJnoRgRvUM_H05v_a3XwRAjAHLSh&__tn__=-UK-R&c[0]=AT1kCascP3uNbwdZ7EbBLN9tvBSnh5UuKKsenCmUMo6TGac2h_6QrSUYsaVUhKeukRzzx3FgOIjQwQExuBDt9-5GiCUQIXSiWDdm_9Y_MFrVCHKbxUxiB7w3f4SBpLCPymEBOXmhKIAGNe-HckTiHd_yL9-AMV2H_gTOCIhEm_A"><button
+          class="nomination">
+          Nomination
+        </button></a>
+      <a href="contactus.html"><button class="contactus">
+          Contact Us
+        </button></a>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+
+
+      </div>
+
+      <div class="logos-slide">
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+        <img src="./logos/jgo2-logo.png" />
+        <img src="./logos/sea-logo.png" />
+        <img src="./logos/ppsa-logo.png" />
+        <img src="./logos/jgoe-logo.png" />
+
+
+
+      </div>
+    </div>
+    <div class="slider-frame">
+      <div class="slide-images">
+        <div class="img-container">
+          <img src="images/img1.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img2.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img3.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img4.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img5.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img6.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img7.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img8.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img9.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img10.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img11.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img12.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img13.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img14.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img15.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img16.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img17.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img18.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img19.jpg">
+        </div>
+        <div class="img-container">
+          <img src="images/img20.jpg">
         </div>
       </div>
-      
+  
+    </div>
 
-      
-    <footer>
-      <p>&copy; 2023 Philippine Public Service Awards and Outstanding Executive Awards. All rights reserved.</p>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+
+        <p class="footer-links">
+          <a href="index.html" class="link-1">Home</a>
+
+          <a href="aboutus.html">About</a>
+
+          <a href="awardees.html">Awardees</a>
+
+          <a href="faq.html">FAQ's</a>
+
+          <a href="contactus.html">Contact</a>
+        </p>
+        <br>
+        <p class="footer-company-name">© 2023 Philippine Public Service Leadership Awards
+          Awards.
+          All rights reserved.</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Mandaluyong City, Manila, Philippines
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>0968 859 1043
+          </p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">ppslawards@gmail.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About the company</span>
+          Philippine Public Service Leadership Awards is honor individuals who make outstanding contributions and who’s accomplished are models of exemplary public service for those dedicated to the public good-now and in the future. This recognition highlights milestone of success and triumph in public service worthy of praise and admiration Public Service Leadership Awards recognizes your accomplishments in public service that contribute and boosted your talent and skill towards nation-building.
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
     </footer>
-    
-
+    <!-- javascript  -->
     <script>
-      const toggleBtn = document.querySelector('.toggle_btn');
-      const toggleBtnIcon = document.querySelector('toggle_btn i');
-      const dropDownMenu = document.querySelector('.dropdown_menu');
-    
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open');
-        const isOpen = dropDownMenu.classList.contains('open');
-      } 
+      var target_mili_sec = new Date("November 04, 2023 12:00:00").getTime();
+      function timer() {
+        var now_mili_sec = new Date().getTime();
+        var remaining_sec = Math.floor((target_mili_sec - now_mili_sec) / 1000);
+
+        var day = Math.floor(remaining_sec / (3600 * 24));
+        var hour = Math.floor((remaining_sec % (3600 * 24)) / 3600);
+        var min = Math.floor((remaining_sec % 3600) / 60);
+        var sec = Math.floor(remaining_sec % 60);
+
+        document.querySelector("#day").innerHTML = day;
+        document.querySelector("#hour").innerHTML = hour;
+        document.querySelector("#min").innerHTML = min;
+        document.querySelector("#sec").innerHTML = sec;
+      }
+
+      setInterval(timer, 1000); //1000 it means 1 sec
+
     </script>
-  </body>
+    <main>
+      <!--    <section id="home">
+          <h1>WELCOME<br>SOUTHEAST ASIA BUSINESS EXCELLENCE AWARDS </h1>
+          <br><br>  -->
+      <!--<p>LLorem ipsum dolor sit amet, consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore.
+  
+          </p> -->
+      </section>
+    </main>
+    < <script>
+      const toggleBtn = document.querySelector('.toggle_btn')
+      const toggleBtnIcon = document.querySelector('toggle_btn i')
+      const dropDownMenu = document.querySelector('.dropdown_menu')
+
+      toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      }
+      </script>
+</body>
+
 </html>

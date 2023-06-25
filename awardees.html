@@ -1,155 +1,421 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>PPSLA</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" type="x-icon" href="images/tabimg.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-    <style>
+<html lang="en">
 
-      .awardees{
-        color: gold;
+<head>
+  <title>SEA BEA</title>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="x-icon" href="images/tab1.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .awardees {
+      color: gold;
+    }
+    @media (max-width: 768px) {
+    .about-section h1 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
 
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
 
-        
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .column {
+      float: left;
+      width: 30%;
+      padding: 0px;
+      margin-left: 45px;
+    }
+
+    .card {
+      margin-bottom: 10px;
+      background-color: rgb(41, 39, 39);
+      border-radius: 10px;
+      color: white;
+      padding: 0px;
+      padding-bottom: 20px;
+    }
+
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: rgb(41, 39, 39);
+      color: white;
+    }
+
+    .container {
+      padding: 0 16px;
+    }
+
+    .title {
+      color: grey;
+    }
+
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
       }
+    }
+  </style>
+</head>
 
-    </style>
-    <title>PPSA</title>
-  </head>
-  <body>
-    <header>      
-      <div class="navbar">
-        <div class="navbar">
-          <div class="logo"><a href="">
-            <img src="images/tabimg.png" alt=""></a></div>
-        <ul class="links">
-          <li><a href="index.html">Home</a></li>
-          <li><a  href="aboutus.html">About Us</a></li>
-        <!--<li><a class="awardees" href="awardees.html">Awardees</a></li> -->  
-        <!-- <li><a href="bene">Our Beneficiaries</a></li> -->          
-        </ul>        
+<body>
+  <header>
+
+    <div class="navbar">
+      <div class="logo"><a href="">
+          <img src="images/tab.png" alt=""></a></div>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a class="awardees" href="awardees.html">Awardees</a></li>
+        <li><a href="pdf/SEA-BEA-CRITERIA.pdf" download>Criteria</a></li>
+        <li><a href="faq.html">FAQ's</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+      <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a class="awardees " href="awardees.html">Awardees</a></li>
+      <li><a href="pdf/SEA-BEA-CRITERIA.pdf" download>Criteria</a></li>
+      <li><a href="faq.html">FAQ's</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSfM1xhN655LhT6H5oRfa_6cr-jeISNXxesy6kPa_CPV4cKg/viewform?fbclid=IwAR0ohbZODdEb52DPDtAErVqpmyhzZwyJLmFZT5VE5BbkTlf_3vZqw0fdslo" class="action_btn">Nomination</a></li>
+    </div>
+  </header>
+
+  <script src="/javascript/navbar.js"></script>
+  <br>
 
 
+
+  <div class="about-section">
+    <h1>Public Service Leadership Awardees list of June 2023</h1>
   </div>
-      <div class="dropdown_menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="awardees.html">Awardees</a></li>
-          <!-- <li><a href="bene">Our Beneficiaries</a></li> --> 
+  <br>
+  <div class="row">
+    <!-- Column 1 -->
+    <div class="column">
+      <div class="card">
+        <img src="images/img17.jpg" alt="Image 1" style="width:100%">
+        <div class="container">
+          <h2>Mayor. Alfredo Malannag Jr.</h2>
+          <p class="title">Public Service Leadership</p>
+
+        </div>
       </div>
-      <br>
-      <div class="slider-frame">
-        <div class="slide-images">
-          <div class="img-container">
-            <img src="images/img1.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img2.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img3.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img4.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img5.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img6.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img7.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img8.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img9.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img10.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img12.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img13.jpg">
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column">
+      <div class="card">
+        <img src="images/img15.jpg" alt="Image 2" style="width:100%">
+        <div class="container">
+          <h2>MAyor. Angelica Portes</h2>
+          <p class="title">Public Service Leadership</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column">
+      <div class="card">
+        <img src="images/img3.jpg" alt="Image 3" style="width:100%">
+        <div class="container">
+          <h2>Mayor. Elmor Vitanggol Vita</h2>
+          <p class="title">Public Service Leadership</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Column 1 -->
+      <div class="column">
+        <div class="card">
+          <img src="images/img4.jpg" alt="Image 4" style="width:100%">
+          <div class="container">
+            <h2>Mayor Atty. Raldis Andrei A. Bulayungan</h2>
+        <p class="title">Public Service Leadership</p>
+
           </div>
         </div>
-      </div>    
       </div>
-      <br>
-      <div class="slider-frame">
-        <div class="slide-images">
-          <div class="img-container">
-            <img src="images/img1.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img2.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img3.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img4.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img5.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img6.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img7.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img8.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img9.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img10.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img12.jpg">
-          </div>
-          <div class="img-container">
-            <img src="images/img13.jpg">
+
+      <!-- Column 2 -->
+      <div class="column">
+        <div class="card">
+          <img src="images/img5.jpg" alt="Image 5" style="width:100%">
+          <div class="container">
+            <h2>Mayor Jeofrey P. Saguid</h2>
+            <p class="title">Public Service Leadership</p>
+
           </div>
         </div>
-      </div>    
       </div>
-      
-    <footer>
-      <p>&copy; 2023 Philippine Public Service Awards and Outstanding Executive Awards. All rights reserved.</p>
-    </footer>
 
-    <script>
-      const toggleBtn = document.querySelector('.toggle_btn')
-      const toggleBtnIcon = document.querySelector('toggle_btn i')
-      const dropDownMenu = document.querySelector('.dropdown_menu')
+      <!-- Column 3 -->
+      <div class="column">
+        <div class="card">
+          <img src="images/img6.jpg" alt="Image 6" style="width:100%">
+          <div class="container">
+            <h2>Mayor. Hector Reuel D. Pascua</h2>
+            <p class="title">Public Service Leadership</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="column">
+          <div class="card">
+            <img src="images/img7.jpg" alt="Image 7" style="width:100%">
+            <div class="container">
+              <h2>Mayor. Gerald Anthony V. Gullas Jr</h2>
+              <p class="title">Public Service Leadership</p>
 
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
+            </div>
+          </div>
+        </div>
 
-      } 
-    </script>
-  </body>
-    
-  </body>
+        <!-- Column 2 -->
+        <div class="column">
+          <div class="card">
+            <img src="images/img8.jpg" alt="Image 8" style="width:100%">
+            <div class="container">
+              <h2>Sacrement S. Gumilab</h2>
+              <p class="title">Public Service Leadership</p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
+          <div class="card">
+            <img src="images/img9.jpg" alt="Image 9" style="width:100%">
+            <div class="container">
+              <h2>Brgy. Captain Allan P. Franza</h2>
+              <p class="title">Public Service Leadership</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="column">
+            <div class="card">
+              <img src="images/img10.jpg" alt="Image 10" style="width:100%">
+              <div class="container">
+                <h2>Hon. Jomelyn M. Abuan</h2>
+                <p class="title">Public Service Leadership</p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="column">
+            <div class="card">
+              <img src="images/img11.jpg" alt="Image 11" style="width:100%">
+              <div class="container">
+                <h2>Tah-Mee</h2>
+                <p class="title">Brgy. Captain Dario Orencia</p>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="column">
+            <div class="card">
+              <img src="images/img12.jpg" alt="Image 12" style="width:100%">
+              <div class="container">
+                <h2>Brgy. Captain Roseller Valera</h2>
+                <p class="title">Public Service Leadership</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="column">
+              <div class="card">
+                <img src="images/img13.jpg" alt="Image 13" style="width:100%">
+                <div class="container">
+                  <h2>Mayor. Jose Antonio C. Bustos</h2>
+                  <p class="title">Public Service Leadership</p>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="column">
+              <div class="card">
+                <img src="images/img14.jpg" alt="Image 14" style="width:100%">
+                <div class="container">
+                  <h2>Mayor. Felipe U. Sanchez</h2>
+                  <p class="title">Public Service Leadership</p>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="column">
+              <div class="card">
+                <img src="images/img2.jpg" alt="Image 15" style="width:100%">
+                <div class="container">
+                  <h2>Brgy. Captain Edwin F. Avilla</h2>
+                  <p class="title">Public Service Leadership</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Column 1 -->
+              <div class="column">
+                <div class="card">
+                  <img src="images/img16.jpg" alt="Image 16" style="width:100%">
+                  <div class="container">
+                    <h2>Mayor. allan MArtine S. De Leon</h2>
+                    <p class="title">Public Service Leadership</p>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="column">
+                <div class="card">
+                  <img src="images/img1.jpg" alt="Image 17" style="width:100%">
+                  <div class="container">
+                    <h2>Mayor. Floremcio C. Garay</h2>
+                    <p class="title">Public Service Leadership</p>
+
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+
+      <p class="footer-links">
+        <a href="index.html" class="link-1">Home</a>
+
+        <a href="aboutus.html">About</a>
+
+        <a href="awardees.html">Awardees</a>
+
+        <a href="faq.html">FAQ's</a>
+
+        <a href="contactus.html">Contact</a>
+      </p>
+      <br>
+      <p class="footer-company-name">© 2023 Philippine Public Service Leadership Awards
+        Awards.
+        All rights reserved.</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Mandaluyong City, Manila, Philippines
+        </p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>0968 859 1043
+        </p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">ppslawards@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        Philippine Public Service Leadership Awards is honor individuals who make outstanding contributions and who’s accomplished are models of exemplary public service for those dedicated to the public good-now and in the future. This recognition highlights milestone of success and triumph in public service worthy of praise and admiration Public Service Leadership Awards recognizes your accomplishments in public service that contribute and boosted your talent and skill towards nation-building.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+
+
+</html>
